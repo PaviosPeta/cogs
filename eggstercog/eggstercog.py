@@ -1,28 +1,29 @@
 from redbot.core import commands
 from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
+from redbot.core.utils.mod import slow_deletion
 import asyncio
 
 class Eggstercog(commands.Cog):   
 
     @commands.command()
-    async def yeetus(self, ctx):
-        """this yeets"""
-        msg = await ctx.send("ai caramba")
+    async def egg(self, ctx):
+        """activates an egg"""
+        msg = await ctx.send("What's that over there?")
         
         start_adding_reactions(msg, ["\N{EGG}"])
         pred = ReactionPredicate.with_emojis(["\N{EGG}"], msg)
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=10)
         except asyncio.TimeoutError:
-            await self._clear_react(msg)
+            redbot.core.utils.mod.slow_deletion(msg)
             await ctx.send("Someone destroyed the egg!")
         
         if not pred.result:
             await ctx.send("You have found the egg!")
     
     @commands.command()
-    async def egg(self, ctx): 
+    async def whereegg(self, ctx): 
         await ctx.send("Where's the egg?")
         
     @commands.command()
