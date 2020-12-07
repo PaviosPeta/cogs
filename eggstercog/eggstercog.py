@@ -1,6 +1,7 @@
 from redbot.core import commands
 from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
+import asyncio
 
 class Eggstercog(commands.Cog):   
 
@@ -15,11 +16,10 @@ class Eggstercog(commands.Cog):
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=10)
         except asyncio.TimeoutError:
             await self._clear_react(msg)
+            await ctx.send("Someone destroyed the egg!")
         
         if not pred.result:
             await ctx.send("You have found the egg!")
-        else: 
-            await ctx.send("Someone destroyed the egg!")
     
     @commands.command()
     async def egg(self, ctx): 
