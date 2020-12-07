@@ -18,7 +18,7 @@ class Eggstercog(commands.Cog):
        # if pred.result: 
         #    await ctx.send("You have found the egg!")
         
-        start_adding_reactions(msg, "\N{EGG}")
+        start_adding_reactions(msg, ["\N{EGG}", "\N{WHITE HEAVY CHECK MARK}"])
         pred = ReactionPredicate.with_emojis(["\N{EGG}", "\N{WHITE HEAVY CHECK MARK}"], msg)
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=60)
