@@ -9,7 +9,7 @@ class Eggstercog(commands.Cog):
         """this yeets"""
         msg = await ctx.send("yeetus yeetus what is this deletus")
         start_adding_reactions(msg, "\N{EGG}")
-        pred = ReactionPredicate.with_emojis(msg, "\N{EGG}")
+        pred = ReactionPredicate.with_emojis("\N{EGG}", msg)
         await ctx.bot.wait_for("reaction_add", check=pred)
         
         if pred.result: 
