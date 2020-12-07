@@ -6,7 +6,7 @@ class Eggstercog(commands.Cog):
     async def yeetus(self, ctx):
         """this yeets"""
         msg = await ctx.send("yeetus yeetus what is this deletus")
-        start_adding_reactions(msg, :egg:)
+        start_adding_reactions(msg, "\N{EGG}")
         
         
     
