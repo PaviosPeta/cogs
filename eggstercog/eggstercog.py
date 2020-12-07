@@ -3,6 +3,11 @@ from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
 
 class Eggstercog(commands.Cog):
+    
+    eggs: ClassVar[Tuple[str, str]] = (
+        "\N{EGG}",
+        "\N{NEGATIVE SQUARED CROSS MARK}",
+    )
 
     @commands.command()
     async def yeetus(self, ctx):
@@ -18,8 +23,8 @@ class Eggstercog(commands.Cog):
        # if pred.result: 
         #    await ctx.send("You have found the egg!")
         
-        start_adding_reactions(msg, ["\N{EGG}", "\N{WHITE HEAVY CHECK MARK}"])
-        pred = ReactionPredicate.with_emojis(["\N{EGG}", "\N{WHITE HEAVY CHECK MARK}"], msg)
+        start_adding_reactions(msg, eggs)
+        pred = ReactionPredicate.with_emojis(eggs, msg)
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=60)
         except asyncio.TimeoutError:
