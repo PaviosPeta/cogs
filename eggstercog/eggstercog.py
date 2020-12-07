@@ -53,6 +53,7 @@ class Eggstercog(commands.Cog):
         
         if not pred.result:
             await ctx.send("You have found the egg!")
-            
+    
+    @commands.command()
     async def egg(self, ctx): 
         await ctx.send("Where's the egg?")
