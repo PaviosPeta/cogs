@@ -19,7 +19,7 @@ from redbot.core.i18n import Translator, cog_i18n
 from redbot.core.commands import Context, Cog
 from redbot.core.utils.chat_formatting import bold, pagify
 
-T_ = Translator("Eggstercog", __file__)
+_ = Translator("Eggstercog", __file__)
 
 
 def _(s):
@@ -34,7 +34,7 @@ def _(s):
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-    CHANNEL_SET = (":white_check_mark: "
+    CHANNEL_SET = _(":white_check_mark: "
                     "The channel for announcing birthdays on **{g}** has been set to: **{c}**.")
     
     async def refreshBuul(self, a: bool):
