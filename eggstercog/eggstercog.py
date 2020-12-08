@@ -16,7 +16,7 @@ class Eggstercog(commands.Cog):
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=10)
         except asyncio.TimeoutError:
-            redbot.core.utils.mod.slow_deletion(msg)
+            slow_deletion(msg)
             await ctx.send("Someone destroyed the egg!")
         
         if not pred.result:
