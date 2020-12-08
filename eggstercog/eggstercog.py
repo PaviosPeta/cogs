@@ -20,7 +20,7 @@ class Eggstercog(commands.Cog):
             slow_deletion([msg])
             await ctx.send("Someone destroyed the egg!")
         
-        if not pred.result and a ==0:
+        if not pred.result and a == 1:
             await ctx.send("You have found the egg!")
     
     @commands.command()
