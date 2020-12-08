@@ -32,8 +32,8 @@ class Eggstercog(commands.Cog):
         if not pred.result and a == 1:
             await ctx.send("You have found the egg!")
     
-    @commands.command(name="dennis")
-    async def dennis(ctx): 
+    @commands.command()
+    async def dennis(self, ctx): 
         """yeet"""
         thang = True
         yikes = 0
@@ -41,7 +41,7 @@ class Eggstercog(commands.Cog):
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            self.refreshBuul(buul)
+            Eggstercog.refreshBuul(buul)
             thang = buul
             await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
