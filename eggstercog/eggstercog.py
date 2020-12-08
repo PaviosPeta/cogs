@@ -11,9 +11,8 @@ class Eggstercog(commands.Cog):
     global buul 
     
     
-    async def refreshBuul(self, ctx, a: bool): 
+    async def refreshBuul(self, a: bool): 
         a = buul
-        await ctx.send("Thang is" + a + " now")
         return a
     
     @commands.command()
@@ -36,14 +35,13 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def dennis(self, ctx): 
         """yeet"""
-        buul = True
         thang = True
         yikes = 0
         while yikes<5: 
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            self.refreshBuul(ctx, buul)
+            self.refreshBuul(buul)
             thang = buul
             await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
