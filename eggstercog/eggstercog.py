@@ -32,6 +32,19 @@ class Eggstercog(commands.Cog):
         if not pred.result and a == 1:
             await ctx.send("You have found the egg!")
     
+    @command.command()
+    async def denis(self, ctx): 
+        """yeet"""
+        thang = True
+        yikes = 0
+        while Thang and yikes<10: 
+            yikes +=1
+            await ctx.send("this is denis")
+            time.sleep(2)
+            thang = refreshBuul(thang)
+    
+    
+    
     @commands.command()
     async def whereegg(self, ctx):
         """wirft zwar keinen fehler mehr, aber halt doch."""
