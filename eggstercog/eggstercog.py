@@ -33,7 +33,7 @@ class Eggstercog(commands.Cog):
             await ctx.send("You have found the egg!")
     
     @commands.command()
-    async def dennis(self, ctx): 
+    async def dennis(ctx): 
         """yeet"""
         thang = True
         yikes = 0
