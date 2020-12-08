@@ -34,7 +34,6 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def whereegg(self, ctx):
         x=0
-        await self.bot.wait_until_ready()
         yeet = True
         
         while yeet and x < 10:
