@@ -6,6 +6,12 @@ import asyncio
 import time
 import discord
 
+import logging
+import hashlib
+import contextlib
+import datetime
+import itertools
+
 from redbot.core import commands, Config, checks
 from redbot.core.bot import Red
 from redbot.core.config import Group
