@@ -45,17 +45,13 @@ class Eggstercog(commands.Cog):
             time.sleep(3)
             try:
                 self.refreshBuul(BUUL)
-                await ctx.send("buul ist " + str(BUUL))
             except:
                 await ctx.send("ERROR: buul ist nicht definiert")
                 break
             thang = BUUL
-#            await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
                 await ctx.send("oke i stop")
                 break
-    
-    
     
     @commands.command()
     async def whereegg(self, ctx):
@@ -97,14 +93,6 @@ class Eggstercog(commands.Cog):
     async def stop(self, ctx): 
         global BUUL
         BUUL = False
-        await ctx.send("buul is " + str(BUUL) + " now")
-        return BUUL
-    
-    @commands.command()
-    async def reset(self, ctx): 
-        global BUUL
-        BUUL = True
-        await ctx.send("buul is " + str(BUUL) + " now")
         return BUUL
         
     @commands.command()
