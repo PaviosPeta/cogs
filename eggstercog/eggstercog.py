@@ -5,7 +5,9 @@ from redbot.core.utils.mod import slow_deletion
 import asyncio
 
 class Eggstercog(commands.Cog):   
-
+    
+    buul = True
+    
     @commands.command()
     async def egg(self, ctx):
         """activates an egg"""
@@ -24,8 +26,14 @@ class Eggstercog(commands.Cog):
             await ctx.send("You have found the egg!")
     
     @commands.command()
-    async def whereegg(self, ctx): 
-        await ctx.send("Where's the egg?")
+    async def whereegg(self, ctx):
+        while buul: 
+            await ctx.send("Where's the egg?")
+            sleep(10)
+            
+    @commands.command()
+    async def thereegg(self, ctx): 
+        buul=False
         
     @commands.command()
     async def eggboard(self, ctx): 
