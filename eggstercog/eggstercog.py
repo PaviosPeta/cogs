@@ -8,7 +8,7 @@ import discord
 
 class Eggstercog(commands.Cog):   
     
-    buul = True 
+    global buul = True
     
     
     async def refreshBuul(self, a: bool): 
