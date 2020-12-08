@@ -45,7 +45,8 @@ class Eggstercog(commands.Cog):
                 
                  #   channel = guild.channels.cache.find('madster');
                 for guild in bot.guilds:
-                    await guild.get_channel(696395792742613083)
+                    _guild = bot.get_guild(int(guild))
+                    await _guild.get_channel(696395792742613083)
 #                        if random.randint(1, 2) == 2:
  #                           continue
   #                      _guild = self.bot.get_guild(int(guild))
