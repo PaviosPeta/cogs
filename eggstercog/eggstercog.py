@@ -30,7 +30,7 @@ def _(s):
     return func
 
 
-@cog_i18n(T_)
+@cog_i18n(_)
 class Eggstercog(commands.Cog):   
     
     BUUL = None
