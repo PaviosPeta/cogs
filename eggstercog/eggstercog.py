@@ -33,15 +33,16 @@ class Eggstercog(commands.Cog):
             await ctx.send("You have found the egg!")
     
     @commands.command()
-    async def denis(self, ctx): 
+    async def dennis(self, ctx): 
         """yeet"""
         thang = True
         yikes = 0
         while yikes<10: 
             yikes +=1
-            await ctx.send("this is denis")
+            await ctx.send("this is dennis")
             time.sleep(2)
-            thang = self.refreshBuul(thang)
+#            thang = self.refreshBuul(thang)
+            thang = buul
             if thang == False: 
                 await ctx.send("oke i stop")
                 break
@@ -85,8 +86,9 @@ class Eggstercog(commands.Cog):
 
             
     @commands.command()
-    async def thereegg(self, ctx): 
+    async def there(self, ctx): 
         buul=False
+        await ctx.send("it is wrong now")
         
     @commands.command()
     async def eggboard(self, ctx): 
