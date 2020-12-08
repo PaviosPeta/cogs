@@ -10,16 +10,17 @@ class Eggstercog(commands.Cog):
     async def egg(self, ctx):
         """activates an egg"""
         msg = await ctx.send("What's that over there?")
-        
+        a = 0
         start_adding_reactions(msg, ["\N{EGG}"])
         pred = ReactionPredicate.with_emojis(["\N{EGG}"], msg)
         try:
             await ctx.bot.wait_for("reaction_add", check=pred, timeout=10)
+            a = 1
         except asyncio.TimeoutError:
-            slow_deletion(msg)
+            slow_deletion([msg])
             await ctx.send("Someone destroyed the egg!")
         
-        if not pred.result:
+       if not pred.result && a ==0:
             await ctx.send("You have found the egg!")
     
     @commands.command()
