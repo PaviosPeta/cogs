@@ -35,6 +35,7 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def dennis(self, ctx): 
         """yeet"""
+        global buul
         thang = True
         yikes = 0
         while yikes<5: 
@@ -43,8 +44,9 @@ class Eggstercog(commands.Cog):
             time.sleep(3)
             try:
                 self.refreshBuul(buul)
+                await ctx.send("buul ist " + str(buul))
             except:
-                await ctx.send("buul ist nicht definiert")
+                await ctx.send("ERROR: buul ist nicht definiert")
                 break
             thang = buul
             await ctx.send("Thang is " + str(thang) + " now")
