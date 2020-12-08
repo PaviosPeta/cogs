@@ -41,9 +41,9 @@ class Eggstercog(commands.Cog):
         
         while yeet and x < 10:
             try:
-                for guild in bot.guilds:
+                #for guild in bot.guilds:
                 
-                    channel = guild.channels.cache.find('madster');
+                 #   channel = guild.channels.cache.find('madster');
                 for guild in bot.guilds:
                     await guild.get_channel(696395792742613083)
 #                        if random.randint(1, 2) == 2:
