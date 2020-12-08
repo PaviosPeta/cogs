@@ -27,9 +27,11 @@ class Eggstercog(commands.Cog):
     
     @commands.command()
     async def whereegg(self, ctx):
-        while buul: 
+        x=0
+        while buul and x < 10: 
             await ctx.send("Where's the egg?")
             sleep(10)
+            x+=1
             
     @commands.command()
     async def thereegg(self, ctx): 
