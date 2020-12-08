@@ -42,7 +42,7 @@ class Eggstercog(commands.Cog):
             await ctx.send("this is denis")
             time.sleep(2)
             thang = self.refreshBuul(thang)
-            if thang = false: 
+            if thang == false: 
                 await ctx.send("oke i stop")
                 break
     
