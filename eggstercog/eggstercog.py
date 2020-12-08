@@ -51,6 +51,7 @@ class Eggstercog(commands.Cog):
             thang = BUUL
             if thang == False: 
                 await ctx.send("oke i stop")
+                BUUL = True
                 break
     
     @commands.command()
