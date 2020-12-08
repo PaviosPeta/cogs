@@ -3,6 +3,7 @@ from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
 from redbot.core.utils.mod import slow_deletion
 import asyncio
+import time
 
 class Eggstercog(commands.Cog):   
     
@@ -31,7 +32,7 @@ class Eggstercog(commands.Cog):
         x=0
         while buul and x < 10: 
             await ctx.send("Where's the egg?")
-            sleep(10)
+            time.sleep(2)
             x+=1
             
     @commands.command()
