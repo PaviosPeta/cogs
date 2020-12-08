@@ -12,7 +12,7 @@ import contextlib
 import datetime
 import itertools
 
-from redbot.core import commands, Config, checks
+from redbot.core import Config, checks
 from redbot.core.bot import Red
 from redbot.core.config import Group
 from redbot.core.i18n import Translator, cog_i18n
@@ -34,7 +34,7 @@ def _(s):
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-    CHANNEL_SET = _(":white_check_mark: "
+    CHANNEL_SET = (":white_check_mark: "
                     "The channel for announcing birthdays on **{g}** has been set to: **{c}**.")
     
     async def refreshBuul(self, a: bool):
