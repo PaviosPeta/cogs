@@ -1,4 +1,4 @@
-from redbot.core import commands
+from redbot.core import bot, commands
 from redbot.core.utils.menus import start_adding_reactions
 from redbot.core.utils.predicates import ReactionPredicate
 from redbot.core.utils.mod import slow_deletion
@@ -58,7 +58,7 @@ class Eggstercog(commands.Cog):
                 x+=1
                 yeet = refreshBuul(yeet)
             except Exception as exc:
-                log.error("that went wrong: ", exc_info=exc)
+                await ctx.send("taht went wrong")
                 break
             
 
