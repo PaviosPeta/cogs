@@ -90,6 +90,8 @@ class Eggstercog(commands.Cog):
     async def there(self, ctx): 
         buul=False
         await ctx.send("it is wrong now")
+        await ctx.send(buul)
+        return buul
         
     @commands.command()
     async def eggboard(self, ctx): 
