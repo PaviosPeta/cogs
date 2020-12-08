@@ -87,7 +87,7 @@ class Eggstercog(commands.Cog):
 
             
     @commands.command()
-    async def there(self, ctx): 
+    def there(self, ctx): 
         buul=False
         await ctx.send("it is wrong now")
 #        return buul
