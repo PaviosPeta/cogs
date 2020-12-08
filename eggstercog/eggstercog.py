@@ -12,6 +12,7 @@ class Eggstercog(commands.Cog):
     
     
     async def refreshBuul(self, a: bool):
+        global buul
         a = buul
         return a
     
@@ -49,7 +50,7 @@ class Eggstercog(commands.Cog):
                 await ctx.send("ERROR: buul ist nicht definiert")
                 break
             thang = buul
-            await ctx.send("Thang is " + str(thang) + " now")
+#            await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
                 await ctx.send("oke i stop")
                 break
