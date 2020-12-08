@@ -8,11 +8,12 @@ import discord
 
 class Eggstercog(commands.Cog):   
     
-    global buul 
+    BUUL = None
     
     
-    async def refreshBuul(self, a: bool): 
-        a = buul
+    async def refreshBuul(self, a: bool):
+        global BUUL
+        a = BUUL
         return a
     
     @commands.command()
@@ -35,21 +36,24 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def dennis(self, ctx): 
         """yeet"""
-        buul = True
+        global BUUL
+        BUUL = True
         thang = True
         yikes = 0
         while yikes<5: 
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            thang = self.refreshBuul(thang)
-#            thang = buul
-            await ctx.send(buul)
+            try:
+                self.refreshBuul(BUUL)
+            except:
+                await ctx.send("ERROR: buul ist nicht definiert")
+                break
+            thang = BUUL
             if thang == False: 
                 await ctx.send("oke i stop")
+                BUUL = True
                 break
-    
-    
     
     @commands.command()
     async def whereegg(self, ctx):
@@ -88,10 +92,18 @@ class Eggstercog(commands.Cog):
 
             
     @commands.command()
-    async def there(self, ctx): 
-        buul=False
-        await ctx.send("it is wrong now")
-        return buul
+    async def stop(self, ctx): 
+        global BUUL
+        BUUL = False
+#        await ctx.send("buul is " + str(BUUL))
+        return BUUL
+    
+    @commands.command()
+    async def reset(self, ctx): 
+        global BUUL
+        BUUL = True
+#        await ctx.send("buul is " + str(BUUL))
+        return BUUL
         
     @commands.command()
     async def eggboard(self, ctx): 
