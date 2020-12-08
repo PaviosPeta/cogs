@@ -35,7 +35,7 @@ class Eggstercog(commands.Cog):
     
     BUUL = None
     CHANNEL_SET = _(":white_check_mark: "
-                    "The channel for announcing birthdays on **{g}** has been set to: **{c}**.")
+                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
     
     async def refreshBuul(self, a: bool):
         global BUUL
