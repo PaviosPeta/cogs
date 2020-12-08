@@ -41,7 +41,11 @@ class Eggstercog(commands.Cog):
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            Eggstercog.refreshBuul(buul)
+            try:
+                self.refreshBuul(buul)
+            except:
+                await ctx.send("buul ist nicht definiert)
+                break
             thang = buul
             await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
