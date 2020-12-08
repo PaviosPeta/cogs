@@ -34,6 +34,8 @@ class Eggstercog(commands.Cog):
     
     @commands.command()
     async def whereegg(self, ctx):
+        """wirft zwar keinen fehler mehr, aber halt doch."""
+        
         x=0
         yeet = True
         
@@ -57,7 +59,7 @@ class Eggstercog(commands.Cog):
                 await asyncio.sleep(2)
                 x+=1
                 yeet = refreshBuul(yeet)
-            except Exception as exc:
+            except Exception:
                 await ctx.send("taht went wrong")
                 break
             
