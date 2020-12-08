@@ -6,7 +6,7 @@ import asyncio
 
 class Eggstercog(commands.Cog):   
     
-    buul = True
+    global buul = True
     
     @commands.command()
     async def egg(self, ctx):
