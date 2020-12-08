@@ -43,9 +43,9 @@ class Eggstercog(commands.Cog):
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            thang = self.refreshBuul(ctx, buul)
-#            thang = buul
-            await ctx.send("Thang is" + str(thang) + " now")
+            self.refreshBuul(ctx, buul)
+            thang = buul
+            await ctx.send("Thang is " + str(thang) + " now")
             if thang == False: 
                 await ctx.send("oke i stop")
                 break
