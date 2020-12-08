@@ -39,9 +39,9 @@ class Eggstercog(commands.Cog):
         
         while yeet and x < 10:
             try:
-#                for guild in self.guildcache:
-                guild = "Lady Red Support Server"
-                channel = guild.channels.cache.find('madster');
+                for guild in bot.guilds:
+                
+                    channel = guild.channels.cache.find('madster');
 #                        if random.randint(1, 2) == 2:
  #                           continue
   #                      _guild = self.bot.get_guild(int(guild))
@@ -50,10 +50,10 @@ class Eggstercog(commands.Cog):
      #                   channel = _guild.get_channel(
       #                      int(random.choice(self.guildcache[guild]["activechannels"]))
        #                 )
-                if channel is None:
-                    continue
+                    if channel is None:
+                        continue
                         
-                await ctx.send("Where egg?")
+                    await ctx.send("Where egg?")
                 await asyncio.sleep(2)
                 x+=1
                 yeet = refreshBuul(yeet)
