@@ -10,8 +10,9 @@ class Eggstercog(commands.Cog):
     global buul 
     buul = True
     
-    def refreshBuul(boolean a): 
+    def refreshBuul(a: boolean): 
         a = buul
+        return a
     
     @commands.command()
     async def egg(self, ctx):
@@ -54,7 +55,7 @@ class Eggstercog(commands.Cog):
                     await ctx.send("Where egg?")
                 await asyncio.sleep(2)
                 x+=1
-                refreshBuul(yeet)
+                yeet = refreshBuul(yeet)
             except Exception as exc:
                 log.error("that went wrong: ", exc_info=exc)
                 break
