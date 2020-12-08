@@ -9,9 +9,9 @@ import discord
 class Eggstercog(commands.Cog):   
     
     global buul 
-    buul = True
     
-    def refreshBuul(a: bool): 
+    
+    async def refreshBuul(self, a: bool): 
         a = buul
         return a
     
@@ -33,6 +33,25 @@ class Eggstercog(commands.Cog):
             await ctx.send("You have found the egg!")
     
     @commands.command()
+    async def dennis(self, ctx): 
+        """yeet"""
+        buul = True
+        thang = True
+        yikes = 0
+        while yikes<5: 
+            yikes +=1
+            await ctx.send("this is dennis")
+            time.sleep(3)
+            thang = self.refreshBuul(thang)
+#            thang = buul
+            await ctx.send(buul)
+            if thang == False: 
+                await ctx.send("oke i stop")
+                break
+    
+    
+    
+    @commands.command()
     async def whereegg(self, ctx):
         """wirft zwar keinen fehler mehr, aber halt doch."""
         
@@ -41,11 +60,12 @@ class Eggstercog(commands.Cog):
         
         while yeet and x < 10:
             try:
-                for guild in bot.guilds:
+                #for guild in bot.guilds:
                 
-                    channel = guild.channels.cache.find('madster');
+                 #   channel = guild.channels.cache.find('madster');
                 for guild in bot.guilds:
-                    await guild.get_channel(696395792742613083)
+                    _guild = bot.get_guild(int(guild))
+                    await _guild.get_channel(696395792742613083)
 #                        if random.randint(1, 2) == 2:
  #                           continue
   #                      _guild = self.bot.get_guild(int(guild))
@@ -68,8 +88,10 @@ class Eggstercog(commands.Cog):
 
             
     @commands.command()
-    async def thereegg(self, ctx): 
+    async def there(self, ctx): 
         buul=False
+        await ctx.send("it is wrong now")
+        return buul
         
     @commands.command()
     async def eggboard(self, ctx): 
