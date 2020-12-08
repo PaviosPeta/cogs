@@ -32,7 +32,7 @@ class Eggstercog(commands.Cog):
         if not pred.result and a == 1:
             await ctx.send("You have found the egg!")
     
-    @command.command()
+    @commands.command()
     async def denis(self, ctx): 
         """yeet"""
         thang = True
