@@ -15,26 +15,26 @@ import itertools
 from redbot.core import Config, checks
 from redbot.core.bot import Red
 from redbot.core.config import Group
-from redbot.core.i18n import Translator, cog_i18n
+#from redbot.core.i18n import Translator, cog_i18n
 from redbot.core.commands import Context, Cog
 from redbot.core.utils.chat_formatting import bold, pagify
 
-T_ = Translator("Eggstercog", __file__)
+#T_ = Translator("Eggstercog", __file__)
 
 
-def _(s):
-    def func(*args, **kwargs):
-        real_args = list(args)
-        real_args.pop(0)
-        return T_(s).format(*real_args, **kwargs)
-    return func
+#def _(s):
+#    def func(*args, **kwargs):
+#        real_args = list(args)
+#        real_args.pop(0)
+#        return T_(s).format(*real_args, **kwargs)
+#    return func
 
 
-@cog_i18n(T_)
+#@cog_i18n(T_)
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-    CHANNEL_SET = _(":white_check_mark: "
+    CHANNEL_SET = (":white_check_mark: "
                     "The channel for announcing eggs **{g}** has been set to: **{c}**.")
     
     async def refreshBuul(self, a: bool):
