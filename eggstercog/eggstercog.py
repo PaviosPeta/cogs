@@ -8,7 +8,7 @@ import discord
 
 class Eggstercog(commands.Cog):   
     
-    BUUL = True
+    BUUL = None
     
     
     async def refreshBuul(self, a: bool):
@@ -37,6 +37,7 @@ class Eggstercog(commands.Cog):
     async def dennis(self, ctx): 
         """yeet"""
         global BUUL
+        BUUL = True
         thang = True
         yikes = 0
         while yikes<5: 
