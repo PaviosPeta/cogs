@@ -41,7 +41,7 @@ class Eggstercog(commands.Cog):
             yikes +=1
             await ctx.send("this is denis")
             time.sleep(2)
-            self.refreshBuul(thang)
+            thang = self.refreshBuul(thang)
     
     
     
