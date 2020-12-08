@@ -9,7 +9,8 @@ import discord
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-    
+    CHANNEL_SET = _(":white_check_mark: "
+                    "The channel for announcing birthdays on **{g}** has been set to: **{c}**.")
     
     async def refreshBuul(self, a: bool):
         global BUUL
@@ -113,4 +114,12 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def eggchannel(self, ctx): 
         """You should be able to set the channel with this. Eventually."""
-        await ctx.send("This is where you'd be able to set the channel.")
+        await ctx.send("Set Channel is " + CHANNEL_SET(g, c))
+
+    @commands.command()
+    async def channel(self, ctx: Context, channel: discord.TextChannel):
+        """Sets the channel"""
+        message = ctx.message
+        guild = message.guild
+        await self.config.guild(channel.guild).channel.set(channel.id)
+        await message.channel.send(self.CHANNEL_SET(g=guild.name, c=channel.name))
