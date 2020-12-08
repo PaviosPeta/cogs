@@ -41,7 +41,7 @@ class Eggstercog(commands.Cog):
             yikes +=1
             await ctx.send("this is dennis")
             time.sleep(3)
-            thang = self.refreshBuul(thang)
+            thang = self.refreshBuul(self, thang)
 #            thang = buul
             await ctx.send(thang)
             if thang == False: 
@@ -90,7 +90,7 @@ class Eggstercog(commands.Cog):
     async def there(self, ctx): 
         buul=False
         await ctx.send("it is wrong now")
-        return buul
+#        return buul
         
     @commands.command()
     async def eggboard(self, ctx): 
