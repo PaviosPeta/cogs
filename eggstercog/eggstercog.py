@@ -37,11 +37,14 @@ class Eggstercog(commands.Cog):
         """yeet"""
         thang = True
         yikes = 0
-        while thang and yikes<10: 
+        while yikes<10: 
             yikes +=1
             await ctx.send("this is denis")
             time.sleep(2)
             thang = self.refreshBuul(thang)
+            if thang = false: 
+                await ctx.send("oke i stop")
+                break
     
     
     
