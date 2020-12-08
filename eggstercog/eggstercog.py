@@ -26,7 +26,7 @@ def _(s):
     def func(*args, **kwargs):
         real_args = list(args)
         real_args.pop(0)
-        return T_(s).format(*real_args, **kwargs)
+        return _(s).format(*real_args, **kwargs)
     return func
 
 
