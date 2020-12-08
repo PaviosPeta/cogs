@@ -87,7 +87,7 @@ class Eggstercog(commands.Cog):
 
             
     @commands.command()
-    async def stop("""self, ctx"""): 
+    async def stop(self, ctx): 
         buul = False
         await ctx.send("it is wrong now")
 #        return buul
