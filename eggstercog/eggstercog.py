@@ -6,37 +6,11 @@ import asyncio
 import time
 import discord
 
-#import logging
-#import hashlib
-#import contextlib
-#import datetime
-#import itertools
 
-#from redbot.core import Config, checks
-#from redbot.core.bot import Red
-#from redbot.core.config import Group
-#from redbot.core.i18n import Translator, cog_i18n
-#from redbot.core.commands import Context, Cog
-#from redbot.core.utils.chat_formatting import bold, pagify
-
-#T_ = Translator("Eggstercog", __file__)
-
-
-#def _(s):
-#    def func(*args, **kwargs):
-#        real_args = list(args)
-#        real_args.pop(0)
-#        return T_(s).format(*real_args, **kwargs)
-#    return func
-
-
-#@cog_i18n(T_)
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-#    CHANNEL_SET = (":white_check_mark: "
-#                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
-#    CHANNEL_SET = (g, c)
+
     
     async def refreshBuul(self, a: bool):
         global BUUL
@@ -141,11 +115,3 @@ class Eggstercog(commands.Cog):
     async def eggchannel(self, ctx): 
         """You should be able to set the channel with this. Eventually."""
         await ctx.send("Set Channel is " + CHANNEL_SET(g, c))
-
-#    @commands.command()
-#    async def channel(self, ctx: Context, channel: discord.TextChannel):
-#        """Sets the channel"""
-#        message = ctx.message
-#        guild = message.guild
-#        await self.config.guild(channel.guild).channel.set(channel.id)
-#        await message.channel.send(self.CHANNEL_SET(g=guild.name, c=channel.name))
