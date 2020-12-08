@@ -34,8 +34,9 @@ from redbot.core.utils.chat_formatting import bold, pagify
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-    CHANNEL_SET = (":white_check_mark: "
-                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
+#    CHANNEL_SET = (":white_check_mark: "
+#                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
+    CHANNEL_SET = (g, c)
     
     async def refreshBuul(self, a: bool):
         global BUUL
