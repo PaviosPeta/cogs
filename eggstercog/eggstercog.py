@@ -84,13 +84,11 @@ class Eggstercog(commands.Cog):
                 await ctx.send("taht went wrong")
                 break
             
-
-            
     @commands.command()
     async def stop(self, ctx): 
         buul = False
         await ctx.send("it is wrong now")
-        return buul
+#        return buul
         
     @commands.command()
     async def eggboard(self, ctx): 
