@@ -40,7 +40,7 @@ class Eggstercog(commands.Cog):
         while yeet and x < 10:
             try:
                 for guild in self.guildcache:
-                    const channel = guild.channels.cache.find(channel => channel.name === 'madster');
+                    channel = guild.channels.cache.find('madster');
 #                        if random.randint(1, 2) == 2:
  #                           continue
   #                      _guild = self.bot.get_guild(int(guild))
