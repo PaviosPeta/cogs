@@ -11,9 +11,9 @@ class Eggstercog(commands.Cog):
     global buul 
     
     
-    async def refreshBuul(self, a: bool): 
-        a = buul
-        return a
+    async def refreshBuul(self, thang): 
+        thang = buul
+        return thang
     
     @commands.command()
     async def egg(self, ctx):
