@@ -10,6 +10,9 @@ class Eggstercog(commands.Cog):
     global buul 
     buul = True
     
+    def refreshBuul(boolean a): 
+        a = buul
+    
     @commands.command()
     async def egg(self, ctx):
         """activates an egg"""
@@ -30,10 +33,33 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def whereegg(self, ctx):
         x=0
-        while buul and x < 10: 
-            await ctx.send("Where's the egg?")
-            time.sleep(2)
-            x+=1
+        await self.bot.wait_until_ready()
+        yeet = True
+        
+        while yeet and x < 10:
+            try:
+                for guild in self.guildcache:
+                    const channel = guild.channels.cache.find(channel => channel.name === 'madster');
+#                        if random.randint(1, 2) == 2:
+ #                           continue
+  #                      _guild = self.bot.get_guild(int(guild))
+   #                     if _guild is None:
+    #                        continue
+     #                   channel = _guild.get_channel(
+      #                      int(random.choice(self.guildcache[guild]["activechannels"]))
+       #                 )
+                    if channel is None:
+                         continue
+                        
+                    await ctx.send("Where egg?")
+                await asyncio.sleep(2)
+                x+=1
+                refreshBuul(yeet)
+            except Exception as exc:
+                log.error("that went wrong: ", exc_info=exc)
+                break
+            
+
             
     @commands.command()
     async def thereegg(self, ctx): 
