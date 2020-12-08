@@ -6,6 +6,13 @@ import asyncio
 import time
 import discord
 
+from redbot.core import commands, Config, checks
+from redbot.core.bot import Red
+from redbot.core.config import Group
+from redbot.core.i18n import Translator, cog_i18n
+from redbot.core.commands import Context, Cog
+from redbot.core.utils.chat_formatting import bold, pagify
+
 class Eggstercog(commands.Cog):   
     
     BUUL = None
