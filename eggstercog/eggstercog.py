@@ -11,7 +11,7 @@ class Eggstercog(commands.Cog):
     global buul 
     
     
-    async def refreshBuul(self, ctx, a: buul): 
+    async def refreshBuul(self, ctx, a: bool): 
         a = buul
         await ctx.send("Thang is" + a + " now")
         return a
