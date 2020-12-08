@@ -44,7 +44,7 @@ class Eggstercog(commands.Cog):
             try:
                 self.refreshBuul(buul)
             except:
-                await ctx.send("buul ist nicht definiert)
+                await ctx.send("buul ist nicht definiert")
                 break
             thang = buul
             await ctx.send("Thang is " + str(thang) + " now")
