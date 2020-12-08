@@ -93,14 +93,14 @@ class Eggstercog(commands.Cog):
     async def stop(self, ctx): 
         global BUUL
         BUUL = False
-        await ctx.send("buul is " + str(BUUL) + )
+        await ctx.send("buul is " + str(BUUL))
         return BUUL
     
     @commands.command()
     async def reset(self, ctx): 
         global BUUL
         BUUL = True
-        await ctx.send("buul is " + str(BUUL) + )
+        await ctx.send("buul is " + str(BUUL))
         return BUUL
         
     @commands.command()
