@@ -11,10 +11,10 @@ class Eggstercog(commands.Cog):
     global buul 
     
     
-    async def refreshBuul(self, ctx, thang): 
-        thang = buul
-        await ctx.send("Thang is" + thang + " now")
-        return thang
+    async def refreshBuul(self, ctx, a: buul): 
+        a = buul
+        await ctx.send("Thang is" + a + " now")
+        return a
     
     @commands.command()
     async def egg(self, ctx):
