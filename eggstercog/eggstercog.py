@@ -19,18 +19,18 @@ from redbot.core.i18n import Translator, cog_i18n
 from redbot.core.commands import Context, Cog
 from redbot.core.utils.chat_formatting import bold, pagify
 
-_ = Translator("Eggstercog", __file__)
+T_ = Translator("Eggstercog", __file__)
 
 
 def _(s):
     def func(*args, **kwargs):
         real_args = list(args)
         real_args.pop(0)
-        return _(s).format(*real_args, **kwargs)
+        return T_(s).format(*real_args, **kwargs)
     return func
 
 
-@cog_i18n(_)
+@cog_i18n(T_)
 class Eggstercog(commands.Cog):   
     
     BUUL = None
