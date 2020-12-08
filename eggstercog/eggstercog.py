@@ -10,7 +10,6 @@ class Eggstercog(commands.Cog):
     
     global buul 
     
-    
     async def refreshBuul(self, a: bool): 
         a = buul
         return a
@@ -44,7 +43,7 @@ class Eggstercog(commands.Cog):
             time.sleep(3)
             thang = self.refreshBuul(thang)
 #            thang = buul
-            await ctx.send(buul)
+            await ctx.send(thang)
             if thang == False: 
                 await ctx.send("oke i stop")
                 break
