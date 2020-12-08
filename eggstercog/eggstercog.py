@@ -6,11 +6,10 @@ import asyncio
 import time
 import discord
 
-
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-
+    
     
     async def refreshBuul(self, a: bool):
         global BUUL
@@ -114,4 +113,4 @@ class Eggstercog(commands.Cog):
     @commands.command()
     async def eggchannel(self, ctx): 
         """You should be able to set the channel with this. Eventually."""
-        await ctx.send("Set Channel is " + CHANNEL_SET(g, c))
+        await ctx.send("This is where you'd be able to set the channel.")
