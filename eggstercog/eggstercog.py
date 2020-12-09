@@ -4,12 +4,12 @@ from redbot.core.utils.predicates import ReactionPredicate
 from redbot.core.utils.mod import slow_deletion
 import asyncio
 import time
+import datetime
 import discord
 
 #import logging
 #import hashlib
 #import contextlib
-import datetime
 #import itertools
 
 #from redbot.core import Config, checks
@@ -34,9 +34,6 @@ import datetime
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-#    CHANNEL_SET = _(":white_check_mark: "
-#                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
-#    CHANNEL_SET = (g, c)
 
     
     
@@ -162,3 +159,11 @@ class Eggstercog(commands.Cog):
         """Shows cock"""
         now = datetime.datetime.utcnow()
         await ctx.send(str(now))
+
+        
+        
+#STUFF FOR CHANNEL_SET
+
+#    CHANNEL_SET = _(":white_check_mark: "
+#                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
+#    CHANNEL_SET = (g, c)
