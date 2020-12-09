@@ -151,3 +151,8 @@ class Eggstercog(commands.Cog):
 #        guild = message.guild
 #        await self.config.guild(channel.guild).channel.set(channel.id)
 #        await message.channel.send(self.CHANNEL_SET(g=guild.name, c=channel.name))
+
+    @commands.command()
+    async def dick(self, ctx): 
+        """Its big"""
+        await ctx.send("Its very big")
