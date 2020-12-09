@@ -9,7 +9,7 @@ import discord
 #import logging
 #import hashlib
 #import contextlib
-#import datetime
+import datetime
 #import itertools
 
 #from redbot.core import Config, checks
@@ -34,7 +34,7 @@ import discord
 class Eggstercog(commands.Cog):   
     
     BUUL = None
-#    CHANNEL_SET = (":white_check_mark: "
+#    CHANNEL_SET = _(":white_check_mark: "
 #                    "The channel for announcing eggs **{g}** has been set to: **{c}**.")
 #    CHANNEL_SET = (g, c)
 
@@ -156,3 +156,9 @@ class Eggstercog(commands.Cog):
     async def dick(self, ctx): 
         """Its big"""
         await ctx.send("Its very big")
+    
+    @commands.command()
+    async def cock(self, ctx): 
+        """Shows cock"""
+        now = datetime.datetime.utcnow()
+        await ctx.send(str(now))
